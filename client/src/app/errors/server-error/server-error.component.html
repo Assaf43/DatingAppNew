@@ -1,0 +1,15 @@
+<h4>Interna Server Error</h4>
+<ng-container *ngIf="error">
+  <h5 class="text-danger">Error: {{ error.message }}</h5>
+  <p class="font-weight-bold">Note: Not Angular Blame</p>
+  <p>What To Do Next</p>
+  <ol>
+    <li>Press F12</li>
+    <li>Network Tab</li>
+    <li>Check The Url</li>
+  </ol>
+  <p style="font-weight: bold">Follwing This Stack Trace</p>
+  <code class="mt-5" style="background-color: whitesmoke">
+    {{ error.details }}
+  </code>
+</ng-container>
