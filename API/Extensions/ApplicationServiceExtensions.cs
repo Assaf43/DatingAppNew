@@ -14,12 +14,12 @@ namespace API.Extensions
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             services.AddEndpointsApiExplorer();
             services.AddSwaggerGen();
-            services.AddDbContext<DataContext>(
-                opt =>
-                {
-                    opt.UseSqlite(config.GetConnectionString("DefaultConnection"));
-                }
-            );
+            // services.AddDbContext<DataContext>(
+            //     opt =>
+            //     {
+            //         opt.UseNpgsql(config.GetConnectionString("DefaultConnection"));
+            //     }
+            // );
             services.AddCors();
             services.AddScoped<ITokenService, TokenService>();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
